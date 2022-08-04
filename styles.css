@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+body {
+  background-image: url(./assets/Beach1.jpg);
+  background-size: 100vh;
+  width: 100%;
+  text-align: center;
+  background-size: cover;
+  background-repeat: repeat;
+}
+#title {
+  color: darkgoldenrod;
+  text-shadow: 2px 2px black;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+#title-info {
+  color: rgb(184, 134, 11, 0.9);
+  text-shadow: 2px 2px black;
+}
+#survey-form {
+  width: 40%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 2%;
+  text-align: left;
+  background-color: rgba(92, 78, 140, 0.5);
+  background-size: cover;
+  padding-bottom: -25%;
+  border: 3px solid rgb(25, 21, 105);
+  border-radius: 10px;
+  color: antiquewhite;
+}
+#survey-form div:nth-child(1) {
+  flex: 1 0 auto;
+}
+#survey-form div:nth-child(2) {
+  flex: 1 0 auto;
+}
+#survey-form div:nth-child(3) {
+  flex: 1 0 100%;
+}
+.form-content {
+  display: flex;
+  flex-flow: column wrap;
+  border: 1px solid rgb(56, 53, 139);
+  border-radius: 10px;
+  width: 100%;
+  line-height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#form-content-TA {
+  display: flex;
+  flex-flow: column;
+  border: 1px solid rgb(56, 53, 139);
+  border-radius: 10px;
+  width: 100%;
+  height: 10%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#radio-check {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+}
+#radiobox {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: left;
+  width: 50%;
+  height: auto;
+  color: rgba(7, 19, 40, 0.8);
+}
+#checkbox {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: left;
+  width: 50%;
+  height: auto;
+  color: rgba(7, 19, 40, 0.8);
+}
+#name {
+  width: 50%;
+  padding: 8px;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: darkgoldenrod;
+}
+#email {
+  width: 50%;
+  padding: 8px;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: darkgoldenrod;
+}
+#number {
+  width: 50%;
+  padding: 8px;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: darkgoldenrod;
+}
+#dropdown-region {
+  width: 50%;
+  padding: 8px;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: rgb(97, 97, 97);
+}
+#label-name {
+  padding-bottom: 4px;
+  font-size: 22px;
+  color: black;
+}
+#label-email {
+  padding-bottom: 4px;
+  font-size: 22px;
+  color: black;
+}
+#label-number {
+  padding-bottom: 4px;
+  font-size: 22px;
+  color: black;
+}
+#label-region {
+  padding-bottom: 4px;
+  font-size: 22px;
+  color: black;
+}
+#label-days {
+  padding-bottom: 4px;
+  font-size: 20px;
+  color: black;
+}
+#label-country {
+  padding-bottom: 4px;
+  font-size: 20px;
+  color: black;
+}
+#label-notes {
+  padding-bottom: 1px;
+  font-size: 20px;
+  color: black;
+}
+#notes {
+  margin-top: 5px;
+  width: 100%;
+  height: 135px;
+  margin-bottom: 2%;
+  resize: none;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: darkgoldenrod;
+}
+#submit {
+  width: 100px;
+  cursor: pointer;
+  height: 30px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(62, 62, 185);
+  text-align: center;
+  margin-bottom: 2%;
+}
+option {
+  color: black;
+}

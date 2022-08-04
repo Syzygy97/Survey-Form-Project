@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aimiel's Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      function validate(){
+        var valid=false;
+
+        if(document.getElementById("HongKong").checked){
+          valid=true;
+        }
+        else if(document.getElementById("Japan").checked){
+          valid=true;
+        }
+        else if(document.getElementById("SouthKorea").checked){
+          valid=true;
+        }
+        else if(document.getElementById("Singapore").checked){
+          valid=true;
+        }
+        else if(document.getElementById("Thailand").checked){
+          valid=true;
+        }
+        else if(document.getElementById("USA").checked){
+          valid=true;
+        }
+        else if(document.getElementById("none").checked){
+          valid=true;
+        }
+        if(valid){
+          alert("Success");
+        }
+        else{
+          alert("Kindly select at least one option in the countries section.");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="title">
+      Stand a chance to win FREE TRIPS to Asia and the United States!
+    </h1>
+    <h2 id="title-info">
+      Just tell us a little bit about your recent travels!
+    </h2>
+    <form autocomplete="off" action="./thankyou.html" id="survey-form" method="get" onsubmit="return validate()">
+      <!--FlexBox 1 Basic Details-->
+      <div class="form-content">
+        <label for="name" id="label-name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Your name here" pattern="[a-zA-Z][a-zA-Z ]{1,}" required />
+        <label for="email" id="label-email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Your email here" required/>
+        <label for="number" id="label-number">Contact Number</label>
+        <input type="text" name="contact-number" id="number" placeholder="Your contact number here" pattern="\d*" minlength="7" maxlength="11" required/>
+        <label for="region" id="label-region">Select Region</label>
+        <!--DropDown List-->
+        <select name="region" id="dropdown-region" required>
+          <option value="" disabled selected hidden>Select your Region</option>
+          <option value="I">I - Ilocos</option>
+          <option value="II">II- Cagayan Valley</option>
+          <option value="III">III - Central Luzon</option>
+          <option value="IV-A">IV-A - CALABARZON</option>
+          <option value="IV-B">IV-B - MIMAROPA</option>
+          <option value="V">V - Bicol</option>
+          <option value="VI">VI - Western Visayas</option>
+          <option value="VII">VII - Central Visayas</option>
+          <option value="VIII">VIII - Eastern Visayas</option>
+          <option value="IX">IX - Zamboanga Peninsula</option>
+          <option value="X">X - Northern Mindanao</option>
+          <option value="XI">X - Davao</option>
+          <option value="XII">XI - SOCCSKSARGEN</option>
+          <option value="XIII">XIII - Caraga</option>
+          <option value="NCR">NCR</option>
+          <option value="CAR">CAR</option>
+          <option value="BARMM">BARMM</option>
+        </select>
+      </div>
+      <!--FlexBox 2 Radio & CheckBoxes-->
+      <div class="form-content">   
+        <div id="radio-check"> 
+          <div id="radiobox">
+            <label for="travel-days" id="label-days">How long do you usually travel?</label>
+              <label for="4Days">
+                <input type="radio" id="4Days" name="travel-days" value="1-4" required>1-4 days</input>
+              </label>
+              <label for="7Days">
+                <input type="radio" id="7Days" name="travel-days" value="5-7">5-7 days</input>
+              </label>
+              <label for="10Days">
+                <input type="radio" id="10Days" name="travel-days" value="8-10">8-10 days</input>
+              </label>
+              <label for="14Days">
+                <input type="radio" id="14Days" name="travel-days" value="11-14">11-14 days</input>
+              </label>
+          </div>
+          <!--CheckBoxes-->
+          <div id="checkbox">
+            <label for="country" id="label-country">What countries have you been to?</label>
+            <label for="HongKong">
+              <input type="checkbox" id="HongKong" name="HongKong">Hong Kong</input>
+            </label>
+            <label for="Japan">
+              <input type="checkbox" id="Japan" name="Japan">Japan</input></label>
+            <label for="SouthKorea">
+              <input type="checkbox" id="SouthKorea" name="SouthKorea">South Korea</input>
+            </label>
+            <label for="Singapore">
+              <input type="checkbox" id="Singapore" name="Singapore">Singapore</input>
+            </label>
+            <label for="Thailand">
+              <input type="checkbox" id="Thailand" name="Thailand">Thailand</input>
+            </label>
+            <label for="USA">
+              <input type="checkbox" id="USA" name="USA">United States of America</input>
+            </label>
+            <label for="none">
+              <input type="checkbox" id="none" name="none-of-the-above"><em>none of the above</em></input>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div id="form-content-TA">
+        <label for="notes" id="label-notes">Tell us about your recent travel!</label>
+        <textarea name="notes" id="notes" placeholder="Let us know here!" cols="30" rows="10"></textarea>
+        <input type="submit" name="button" id="submit" value="SUBMIT"></input>
+      </div>
+    </form>
+  </body>
+</html>
